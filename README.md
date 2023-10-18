@@ -21,25 +21,25 @@ To install and run the application on Docker, follow these steps:
 
 `docker network ls`
 
-4. Clone this repository to your local machine.
-5. Navigate to the project root directory.
-6. Build the python docker image by running the following command:
+3. Clone this repository to your local machine.
+4. Navigate to the project root directory.
+5. Build the python docker image by running the following command:
 
 `docker build -t <imagefile name> .`
 
-7. Verify that the python app image has been created successfully by running the following command:
+6. Verify that the python app image has been created successfully by running the following command:
 
 `docker images`
 
-8. Run the python app image in custom network by running the command:
+7. Run the python app image in custom network by running the command:
 
 `docker run -d -p <PORT NO.> --name <CONTAINER_NAME> --network <CUSTOM_NETWORK_NAME> <IMAGE_NAME>`
 
-9. Run the mongodb image in custom network by running the command:
+8. Run the mongodb image in custom network by running the command:
 
 `docker run -d --name mongo --network <CUSTOM_NETWORK_NAME> mongo`
 
-10. Verify that both containers are running on same network by running the command:
+9. Verify that both containers are running on same network by running the command:
 
 `docker inSpect <CUSTOM_NETWORK_NAME>`
 
